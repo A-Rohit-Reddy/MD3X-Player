@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Slider</title>
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    <div class="player-container">
+        <div class="progress-bar-container">
+            <input type="range" class="progress-slider" min="0" max="100" value="25">
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <span class="current-time">15:22</span>
+                <span class="total-time">54:54</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-button rewind-10">
+                <i class="fa-solid fa-rotate-left fa-rotate-by fa-xl" style="--fa-rotate-angle: 50deg;"></i>
+                <span class="rewind-label">10</span>
+            </button>
+            <button class="control-button play-pause">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <button class="control-button forward-10">
+                <i class="fa-solid fa-rotate-right fa-rotate-by fa-xl" style="--fa-rotate-angle: 310deg;"></i>
+                <span class="forward-label">10</span>
+            </button>
+        </div>
+
+        <div class="playback-speed">
+            <span>1.5x</span>
+            <button class="more-options">
+                <i class="fas fa-ellipsis-h"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="slider.js"></script>
+    <script src="https://kit.fontawesome.com/8579cc46c2.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
