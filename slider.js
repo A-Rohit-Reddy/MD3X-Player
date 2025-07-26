@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const forwardButton = document.querySelector('.forward-10');
 
     let isPlaying = false;
-    let currentPlaybackTime = 15 * 60 + 22; // Initial time in seconds (15:22)
-    const totalPlaybackTime = 54 * 60 + 54; // Total time in seconds (54:54)
+    let currentPlaybackTime = 0; // Initial time in seconds (00:00)
+    const totalPlaybackTime = 3 * 60 + 14; // Total time in seconds (03:14)
 
     // Function to format time from seconds to MM:SS
     function formatTime(seconds) {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentTimeSpan.textContent = formatTime(currentPlaybackTime);
 
         // Update the background of the slider to reflect progress
-        progressSlider.style.background = `linear-gradient(to right, #ffffff ${progressPercentage}%, #444 ${progressPercentage}%)`;
+        progressSlider.style.background = `linear-gradient(to right, white ${progressPercentage}%, gray ${progressPercentage}%)`;
     }
 
     // Initialize display
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentPlaybackTime = (newProgressPercentage / 100) * totalPlaybackTime;
         currentTimeSpan.textContent = formatTime(currentPlaybackTime);
         // Also update the track fill immediately
-        progressSlider.style.background = `linear-gradient(to right, #ffffff ${newProgressPercentage}%, #444 ${newProgressPercentage}%)`;
+        progressSlider.style.background = `linear-gradient(to right, white ${progressSlider.value}%, gray ${progressSlider.value}%)`;
     });
 
     // Event listener for play/pause button
